@@ -1,0 +1,99 @@
+{
+  "id": "realworld",
+  "title": "Real-world tasks",
+  "caption": "Success rate (%) over 30 trials per method-task pair on two xArm manipulators with a fixed ZED Mini stereo camera.",
+  "unit": "%",
+  "avg_label": "Avg.",
+  "row_label": "Method",
+  "lower_is_better": false,
+  "note": null,
+  "tasks": [
+    "Store Block",
+    "Stack Basin",
+    "Place Duck Box"
+  ],
+  "task_groups": null,
+  "methods": [
+    {
+      "name": "DP3",
+      "cite": "ze20243d",
+      "ours": false,
+      "avg": {
+        "mean": 35.6,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 23.3,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 76.7,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 6.7,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "GAP",
+      "cite": "xu2026gap",
+      "ours": false,
+      "avg": {
+        "mean": 64.4,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 73.3,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 86.7,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 33.3,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "JAMB",
+      "cite": null,
+      "ours": true,
+      "avg": {
+        "mean": 85.6,
+        "std": null,
+        "rank": "best"
+      },
+      "values": [
+        {
+          "mean": 83.3,
+          "std": null,
+          "rank": "best"
+        },
+        {
+          "mean": 93.3,
+          "std": null,
+          "rank": "best"
+        },
+        {
+          "mean": 80.0,
+          "std": null,
+          "rank": "best"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "real": {
+    "label": "Real World",
+    "tasks": [
+      {
+        "id": "place_duck_box",
+        "label": "Place Duck Box",
+        "desc": "The rubber duck is placed into the pink box; the arms must agree on the box pose before the duck is released.",
+        "bundle": "bundles/real/place_duck_box/success",
+        "version": "741ae2edc9"
+      },
+      {
+        "id": "stack_basin",
+        "label": "Stack Basin",
+        "desc": "The basin and its contents are transported and stacked, which needs both arms to hold a consistent picture of the object's motion.",
+        "bundle": "bundles/real/stack_basin/success",
+        "version": "894431e411"
+      },
+      {
+        "id": "store_block",
+        "label": "Store Block",
+        "desc": "Blocks are moved from the tray into the storage bin, so one arm's placement depends on where the other has left the bin.",
+        "bundle": "bundles/real/store_block/success",
+        "version": "da2a4ea494"
+      }
+    ]
+  }
+}

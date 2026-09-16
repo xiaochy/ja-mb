@@ -1,0 +1,500 @@
+{
+  "tasks": [
+    {
+      "task": "handover_block",
+      "label": "Handover Block",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/handover_block/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/handover_block/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/handover_block/success/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 16,
+          "file": "data/sim3d/easy/handover_block/failure/seed_0_episode16.json"
+        }
+      ]
+    },
+    {
+      "task": "handover_block",
+      "label": "Handover Block",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 40,
+          "file": "data/sim3d/hard/handover_block/success/seed_0_episode40.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/handover_block/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/handover_block/failure/seed_0_episode10.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/hard/handover_block/failure/seed_0_episode11.json"
+        }
+      ]
+    },
+    {
+      "task": "place_bread_skillet",
+      "label": "Place Bread Skillet",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/place_bread_skillet/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/place_bread_skillet/success/seed_0_episode11.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/easy/place_bread_skillet/success/seed_0_episode12.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/place_bread_skillet/failure/seed_0_episode0.json"
+        }
+      ]
+    },
+    {
+      "task": "place_bread_skillet",
+      "label": "Place Bread Skillet",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/place_bread_skillet/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/place_bread_skillet/failure/seed_0_episode10.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/hard/place_bread_skillet/failure/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/hard/place_bread_skillet/failure/seed_0_episode12.json"
+        }
+      ]
+    },
+    {
+      "task": "stack_blocks_three",
+      "label": "Stack Blocks (Three)",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/stack_blocks_three/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/stack_blocks_three/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/stack_blocks_three/success/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 8,
+          "file": "data/sim3d/easy/stack_blocks_three/failure/seed_0_episode8.json"
+        }
+      ]
+    },
+    {
+      "task": "stack_blocks_three",
+      "label": "Stack Blocks (Three)",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 16,
+          "file": "data/sim3d/hard/stack_blocks_three/success/seed_0_episode16.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 19,
+          "file": "data/sim3d/hard/stack_blocks_three/success/seed_0_episode19.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/stack_blocks_three/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/stack_blocks_three/failure/seed_0_episode10.json"
+        }
+      ]
+    },
+    {
+      "task": "stack_blocks_two",
+      "label": "Stack Blocks (Two)",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/stack_blocks_two/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/stack_blocks_two/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/stack_blocks_two/success/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 2,
+          "file": "data/sim3d/easy/stack_blocks_two/failure/seed_0_episode2.json"
+        }
+      ]
+    },
+    {
+      "task": "stack_blocks_two",
+      "label": "Stack Blocks (Two)",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 15,
+          "file": "data/sim3d/hard/stack_blocks_two/success/seed_0_episode15.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 26,
+          "file": "data/sim3d/hard/stack_blocks_two/success/seed_0_episode26.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/stack_blocks_two/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/stack_blocks_two/failure/seed_0_episode10.json"
+        }
+      ]
+    },
+    {
+      "task": "scan_object",
+      "label": "Scan Object",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/scan_object/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/scan_object/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 13,
+          "file": "data/sim3d/easy/scan_object/success/seed_0_episode13.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/scan_object/failure/seed_0_episode11.json"
+        }
+      ]
+    },
+    {
+      "task": "scan_object",
+      "label": "Scan Object",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 46,
+          "file": "data/sim3d/hard/scan_object/success/seed_0_episode46.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/scan_object/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/scan_object/failure/seed_0_episode10.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/hard/scan_object/failure/seed_0_episode11.json"
+        }
+      ]
+    },
+    {
+      "task": "place_bread_basket",
+      "label": "Place Bread Basket",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/place_bread_basket/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/place_bread_basket/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/place_bread_basket/success/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/easy/place_bread_basket/failure/seed_0_episode12.json"
+        }
+      ]
+    },
+    {
+      "task": "place_bread_basket",
+      "label": "Place Bread Basket",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/place_bread_basket/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/hard/place_bread_basket/success/seed_0_episode12.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/place_bread_basket/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/hard/place_bread_basket/failure/seed_0_episode11.json"
+        }
+      ]
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "label": "Pick Diverse Bottles",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/pick_diverse_bottles/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/easy/pick_diverse_bottles/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/easy/pick_diverse_bottles/success/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 1,
+          "file": "data/sim3d/easy/pick_diverse_bottles/failure/seed_0_episode1.json"
+        }
+      ]
+    },
+    {
+      "task": "pick_diverse_bottles",
+      "label": "Pick Diverse Bottles",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/hard/pick_diverse_bottles/success/seed_0_episode12.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 15,
+          "file": "data/sim3d/hard/pick_diverse_bottles/success/seed_0_episode15.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/pick_diverse_bottles/failure/seed_0_episode0.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/pick_diverse_bottles/failure/seed_0_episode10.json"
+        }
+      ]
+    },
+    {
+      "task": "place_dual_shoes",
+      "label": "Place Dual Shoes",
+      "setting": "easy",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/easy/place_dual_shoes/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/easy/place_dual_shoes/success/seed_0_episode12.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 14,
+          "file": "data/sim3d/easy/place_dual_shoes/success/seed_0_episode14.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 1,
+          "file": "data/sim3d/easy/place_dual_shoes/failure/seed_0_episode1.json"
+        }
+      ]
+    },
+    {
+      "task": "place_dual_shoes",
+      "label": "Place Dual Shoes",
+      "setting": "hard",
+      "episodes": [
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 0,
+          "file": "data/sim3d/hard/place_dual_shoes/success/seed_0_episode0.json"
+        },
+        {
+          "outcome": "success",
+          "seed": "seed_0",
+          "episode": 10,
+          "file": "data/sim3d/hard/place_dual_shoes/success/seed_0_episode10.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 11,
+          "file": "data/sim3d/hard/place_dual_shoes/failure/seed_0_episode11.json"
+        },
+        {
+          "outcome": "failure",
+          "seed": "seed_0",
+          "episode": 12,
+          "file": "data/sim3d/hard/place_dual_shoes/failure/seed_0_episode12.json"
+        }
+      ]
+    }
+  ]
+}

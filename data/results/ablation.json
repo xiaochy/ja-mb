@@ -1,0 +1,149 @@
+{
+  "id": "ablation",
+  "title": "Future-track modeling",
+  "caption": "Average success rate (%) on the eight RoboTwin ablation tasks, split by coordination type. Each variant changes one component of the full model.",
+  "unit": "%",
+  "avg_label": "Avg.",
+  "row_label": "Variant",
+  "lower_is_better": false,
+  "note": null,
+  "tasks": [
+    "Sync.",
+    "Seq."
+  ],
+  "task_groups": null,
+  "methods": [
+    {
+      "name": "Action-only",
+      "cite": null,
+      "ours": false,
+      "avg": {
+        "mean": 61.4,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 57.5,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 65.3,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "w/o Visual\u2013Track Concatenation",
+      "cite": null,
+      "ours": false,
+      "avg": {
+        "mean": 70.0,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 67.7,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 72.3,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "Track regression",
+      "cite": null,
+      "ours": false,
+      "avg": {
+        "mean": 73.9,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 68.4,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 79.3,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "Track-conditioned action diffusion",
+      "cite": null,
+      "ours": false,
+      "avg": {
+        "mean": 76.3,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 72.8,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 79.8,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "w/o 4D RoPE",
+      "cite": null,
+      "ours": false,
+      "avg": {
+        "mean": 74.1,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 65.7,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 82.5,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "Full model",
+      "cite": null,
+      "ours": true,
+      "avg": {
+        "mean": 81.7,
+        "std": null,
+        "rank": "best"
+      },
+      "values": [
+        {
+          "mean": 74.3,
+          "std": null,
+          "rank": "best"
+        },
+        {
+          "mean": 89.0,
+          "std": null,
+          "rank": "best"
+        }
+      ]
+    }
+  ]
+}

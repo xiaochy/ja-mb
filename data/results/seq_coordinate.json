@@ -1,0 +1,335 @@
+{
+  "id": "seq_coordinate",
+  "title": "Seq-coordinate tasks",
+  "caption": "Sequential coordination requiring multi-step manipulation and long-horizon reasoning. Mean \u00b1 standard deviation over three training seeds, 50 rollouts per seed.",
+  "unit": "%",
+  "avg_label": "Avg.",
+  "row_label": "Method",
+  "lower_is_better": false,
+  "note": null,
+  "tasks": [
+    "Handover Block",
+    "Hang Mug",
+    "Place Object Basket",
+    "Scan Object",
+    "Stack Blocks Two",
+    "Stack Blocks Three",
+    "Stack Bowls Two",
+    "Stack Bowls Three"
+  ],
+  "task_groups": null,
+  "methods": [
+    {
+      "name": "DP",
+      "cite": "chi2023diffusion",
+      "ours": false,
+      "avg": {
+        "mean": 39.0,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 64.0,
+          "std": 6.5,
+          "rank": null
+        },
+        {
+          "mean": 20.7,
+          "std": 5.2,
+          "rank": null
+        },
+        {
+          "mean": 34.7,
+          "std": 6.6,
+          "rank": null
+        },
+        {
+          "mean": 20.7,
+          "std": 5.2,
+          "rank": null
+        },
+        {
+          "mean": 10.7,
+          "std": 1.9,
+          "rank": null
+        },
+        {
+          "mean": 0.0,
+          "std": 0.0,
+          "rank": null
+        },
+        {
+          "mean": 87.3,
+          "std": 1.9,
+          "rank": null
+        },
+        {
+          "mean": 74.0,
+          "std": 4.3,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "DP3",
+      "cite": "ze20243d",
+      "ours": false,
+      "avg": {
+        "mean": 51.9,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 95.3,
+          "std": 1.9,
+          "rank": "second"
+        },
+        {
+          "mean": 22.0,
+          "std": 1.6,
+          "rank": null
+        },
+        {
+          "mean": 52.0,
+          "std": 4.3,
+          "rank": null
+        },
+        {
+          "mean": 42.7,
+          "std": 5.2,
+          "rank": null
+        },
+        {
+          "mean": 38.0,
+          "std": 2.8,
+          "rank": null
+        },
+        {
+          "mean": 2.0,
+          "std": 1.6,
+          "rank": null
+        },
+        {
+          "mean": 92.7,
+          "std": 2.5,
+          "rank": null
+        },
+        {
+          "mean": 70.7,
+          "std": 1.9,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "DICP",
+      "cite": "xu2025imaginative",
+      "ours": false,
+      "avg": {
+        "mean": 61.5,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 84.0,
+          "std": 3.3,
+          "rank": null
+        },
+        {
+          "mean": 37.3,
+          "std": 4.7,
+          "rank": "second"
+        },
+        {
+          "mean": 62.0,
+          "std": 4.3,
+          "rank": "second"
+        },
+        {
+          "mean": 27.3,
+          "std": 6.6,
+          "rank": null
+        },
+        {
+          "mean": 74.0,
+          "std": 1.6,
+          "rank": "second"
+        },
+        {
+          "mean": 38.0,
+          "std": 0.0,
+          "rank": "second"
+        },
+        {
+          "mean": 94.7,
+          "std": 3.4,
+          "rank": "best"
+        },
+        {
+          "mean": 75.0,
+          "std": 5.0,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "GAP",
+      "cite": "xu2026gap",
+      "ours": false,
+      "avg": {
+        "mean": 51.1,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 73.3,
+          "std": 1.9,
+          "rank": null
+        },
+        {
+          "mean": 24.7,
+          "std": 9.0,
+          "rank": null
+        },
+        {
+          "mean": 52.7,
+          "std": 4.7,
+          "rank": null
+        },
+        {
+          "mean": 45.0,
+          "std": 3.0,
+          "rank": "second"
+        },
+        {
+          "mean": 41.3,
+          "std": 0.9,
+          "rank": null
+        },
+        {
+          "mean": 0.7,
+          "std": 0.9,
+          "rank": null
+        },
+        {
+          "mean": 92.0,
+          "std": 2.8,
+          "rank": null
+        },
+        {
+          "mean": 78.7,
+          "std": 5.7,
+          "rank": "best"
+        }
+      ]
+    },
+    {
+      "name": "ATM",
+      "cite": "wen2023any",
+      "ours": false,
+      "avg": {
+        "mean": 40.8,
+        "std": null,
+        "rank": null
+      },
+      "values": [
+        {
+          "mean": 56.7,
+          "std": 2.5,
+          "rank": null
+        },
+        {
+          "mean": 24.7,
+          "std": 1.9,
+          "rank": null
+        },
+        {
+          "mean": 40.0,
+          "std": 7.1,
+          "rank": null
+        },
+        {
+          "mean": 28.7,
+          "std": 5.2,
+          "rank": null
+        },
+        {
+          "mean": 24.0,
+          "std": 1.6,
+          "rank": null
+        },
+        {
+          "mean": 8.0,
+          "std": 1.6,
+          "rank": null
+        },
+        {
+          "mean": 76.7,
+          "std": 5.0,
+          "rank": null
+        },
+        {
+          "mean": 67.3,
+          "std": 3.4,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "JAMB",
+      "cite": null,
+      "ours": true,
+      "avg": {
+        "mean": 81.6,
+        "std": null,
+        "rank": "best"
+      },
+      "values": [
+        {
+          "mean": 96.7,
+          "std": 0.9,
+          "rank": "best"
+        },
+        {
+          "mean": 54.0,
+          "std": 3.3,
+          "rank": "best"
+        },
+        {
+          "mean": 70.7,
+          "std": 5.7,
+          "rank": "best"
+        },
+        {
+          "mean": 72.0,
+          "std": 2.8,
+          "rank": "best"
+        },
+        {
+          "mean": 91.3,
+          "std": 2.5,
+          "rank": "best"
+        },
+        {
+          "mean": 96.0,
+          "std": 1.6,
+          "rank": "best"
+        },
+        {
+          "mean": 94.0,
+          "std": 4.3,
+          "rank": "second"
+        },
+        {
+          "mean": 78.0,
+          "std": 4.3,
+          "rank": "second"
+        }
+      ]
+    }
+  ]
+}

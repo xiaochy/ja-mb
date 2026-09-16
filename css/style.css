@@ -1,0 +1,1338 @@
+/* ====================================================================
+   JAMB -- project page.
+
+   Black text on white. Where a colour is needed -- section titles,
+   controls, charts, the dark panel behind the WebGL view -- it is navy
+   #00274C or maize #FFCB05 and nothing else. The two exceptions are data
+   encodings: the red->maize future-time track ramp with the two
+   end-effector colours that must stay outside it, and the three pastels
+   carried over from the paper's own teaser chart.
+   ==================================================================== */
+
+:root {
+  --navy: #00274c;
+  --maize: #ffcb05;
+
+  --ink: #111111;
+  --ink-2: #3d3d3d;
+  --ink-3: #767676;
+  --rule: #d9d9d9;
+  --rule-2: #ededed;
+  --ground: #ffffff;
+
+  /* the WebGL panel is dark: a point cloud on white is unreadable */
+  --panel: #00274c;
+  --panel-2: #013663;
+  --panel-rule: rgba(255, 255, 255, 0.16);
+  --panel-ink: #eef3f8;
+  --panel-ink-2: #a4bcd4;
+
+  /* future-time ramp; mirrored numerically in js/colormap.js */
+  --t0: #c81e1e;
+  --t1: #e24a1a;
+  --t2: #f4761a;
+  --t3: #fda31a;
+  --t4: #ffcb05;
+
+  --left-ee: #35d0e8;
+  --right-ee: #c9a0ff;
+
+  /* paradigm colours, taken from the paper's teaser bar chart */
+  --p-red: rgb(245, 203, 185);
+  --p-blue: rgb(194, 212, 235);
+  --p-green: rgb(195, 216, 187);
+
+  --radius: 8px;
+  --page: 1060px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.62;
+  color: var(--ink);
+  background: var(--ground);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 2px;
+}
+
+.container {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-tight {
+  padding: 1.2rem 0 1.8rem;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  color: var(--navy);
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--maize);
+  display: inline-block;
+}
+
+.block-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  /* the gap above separates the two experiment blocks; the first one sits
+     just under the section title instead */
+  margin: 4rem 0 1rem;
+}
+
+.block-title:first-of-type {
+  margin-top: 1.2rem;
+}
+
+/* opens a clearer break between two experiment blocks inside one section */
+.block-title.block-title-lead {
+  margin-top: 6.5rem;
+}
+
+.prose {
+  color: var(--ink-2);
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.caption {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  color: var(--ink-3);
+}
+
+/* ---------------------------------------------------------------- hero */
+
+.hero {
+  padding: 3rem 0 2.2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+
+.paper-title {
+  /* the line break is explicit in the markup: the method name and the phrase
+     it expands on stay together, the qualifier drops to line two */
+  font-size: 2.9rem;
+  font-weight: 600;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.authors {
+  margin: 1.4rem 0 0.2rem;
+  font-size: 1.22rem;
+}
+
+.venue {
+  margin: 0;
+  font-size: 1.02rem;
+  color: var(--ink-3);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+.btn:hover {
+  background: var(--navy);
+  color: var(--maize);
+}
+
+.btn.is-pending {
+  border-color: var(--rule);
+  color: var(--ink-3);
+  cursor: default;
+}
+
+.btn.is-pending:hover {
+  background: transparent;
+  color: var(--ink-3);
+}
+
+/* ---------------------------------------------------------------- teaser video */
+
+.video-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+
+.video-frame video {
+  width: 100%;
+  aspect-ratio: 427 / 240;
+  background: #000;
+}
+
+/* ---------------------------------------------------------------- paradigm + chart */
+
+.paradigm {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.paradigm-fig {
+  position: relative;
+  margin: 0;
+  line-height: 0;
+}
+
+.paradigm-fig img {
+  width: 100%;
+}
+
+/* One hit region per paradigm band, measured from the cropped teaser. */
+.hot {
+  position: absolute;
+  left: 23%;
+  width: 77%;
+  top: var(--top);
+  height: var(--h);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s;
+}
+
+.paradigm.is-active .hot {
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.paradigm.is-active .hot.is-on {
+  background: rgba(255, 255, 255, 0);
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(255, 203, 5, 0.55);
+}
+
+.hot:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.paradigm-chart {
+  min-width: 0;
+}
+
+.chart-title {
+  font-size: 0.98rem;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+.chart {
+  width: 100%;
+}
+
+.chart svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ---------------------------------------------------------------- figures */
+
+.figure-frame {
+  margin: 0 0 1.6rem;
+}
+
+.figure-frame img {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------------- shared controls */
+
+.segmented {
+  display: inline-flex;
+  border: 1.5px solid var(--navy);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* [hidden] is a UA rule and loses to the author display above */
+.segmented[hidden] {
+  display: none;
+}
+
+.segmented button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--navy);
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.segmented button + button {
+  border-left: 1.5px solid var(--navy);
+}
+
+.segmented button:hover:not(.is-active) {
+  background: rgba(0, 39, 76, 0.07);
+}
+
+.segmented button.is-active {
+  background: var(--navy);
+  color: var(--maize);
+}
+
+/* On the navy theater panel the white pill reads as a hole punched in the
+   panel, and the active state (navy fill) disappears into the background --
+   only its maize text sets it apart. Invert the pair there: maize fill marks
+   the selection, navy carries the text. */
+.theater .segmented {
+  background: transparent;
+  border-color: var(--maize);
+}
+
+.theater .segmented button {
+  color: var(--panel-ink);
+  /* shorter pill, same width: the font-size and the horizontal padding are
+     left at the shared values, so only the line box and the vertical padding
+     give up height. */
+  line-height: 1.2;
+  padding-top: 0.28rem;
+  padding-bottom: 0.28rem;
+}
+
+.theater .segmented button + button {
+  border-left-color: var(--maize);
+}
+
+.theater .segmented button:hover:not(.is-active) {
+  background: rgba(255, 203, 5, 0.16);
+}
+
+.theater .segmented button.is-active {
+  background: var(--maize);
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.loading {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--ink-3);
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+}
+
+/* ---------------------------------------------------------------- gallery */
+
+.gallery-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+/* Every clip is shown at the same height, whatever its aspect ratio, so
+   switching tab or mode does not resize the page. */
+.gallery-stage {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-canvas {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.gallery-transport {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.6rem;
+}
+
+.transport-btn {
+  appearance: none;
+  border: 1.5px solid var(--navy);
+  background: #fff;
+  color: var(--navy);
+  border-radius: 999px;
+  width: 1.95rem;
+  height: 1.95rem;
+  font-size: 0.74rem;
+  line-height: 1;
+  cursor: pointer;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.transport-btn:hover {
+  background: var(--navy);
+  color: var(--maize);
+}
+
+.transport-speed {
+  width: auto;
+  padding: 0 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.transport-time {
+  font-size: 0.76rem;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+  min-width: 5.4rem;
+  text-align: right;
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  color: var(--ink);
+  height: 3px;
+  border-radius: 2px;
+  background: var(--rule);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid #fff;
+}
+
+.transport-seek {
+  flex: 1;
+  min-width: 0;
+}
+
+/* episode pager: [< 1/2 >] */
+.gallery-pager {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  border: 1.5px solid var(--navy);
+  border-radius: 999px;
+  padding: 0.08rem;
+  background: #fff;
+}
+
+.gallery-pager[hidden] {
+  display: none;
+}
+
+.pager-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  font-size: 0.78rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pager-btn:hover:not(:disabled) {
+  background: var(--maize);
+}
+
+.pager-btn:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+.pager-count {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  padding: 0 0.28rem;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.gallery-rail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.rail-tile {
+  appearance: none;
+  border: 1px solid var(--rule);
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s;
+}
+
+.rail-tile:hover {
+  border-color: var(--ink-3);
+}
+
+.rail-tile.is-on {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(255, 203, 5, 0.55);
+}
+
+.rail-media {
+  aspect-ratio: 4 / 3;
+  background: var(--rule-2);
+  overflow: hidden;
+}
+
+.rail-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rail-name {
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.25;
+  padding: 0.32rem 0.42rem 0.06rem;
+  color: var(--ink);
+}
+
+.rail-group {
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0 0.42rem 0.36rem;
+}
+
+/* ---------------------------------------------------------------- theater */
+
+.theater {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 0.85rem;
+  color: var(--panel-ink);
+}
+
+.theater-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.75rem;
+}
+
+.bar-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--panel-ink-2);
+}
+
+.task-select {
+  appearance: none;
+  font: inherit;
+  font-size: 0.86rem;
+  color: var(--panel-ink);
+  background: var(--panel-2);
+  border: 1px solid var(--panel-rule);
+  border-radius: 6px;
+  padding: 0.32rem 2rem 0.32rem 0.65rem;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--maize) 50%),
+    linear-gradient(135deg, var(--maize) 50%, transparent 50%);
+  background-position: calc(100% - 15px) 52%, calc(100% - 10px) 52%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.theater-panes {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.8fr) minmax(0, 1.6fr);
+  gap: 0.75rem;
+}
+
+.pane {
+  background: var(--panel-2);
+  border: 1px solid var(--panel-rule);
+  border-radius: var(--radius);
+  padding: 0.55rem;
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pane-head {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--panel-ink-2);
+  margin-bottom: 0.45rem;
+}
+
+.obs-stack {
+  /* the observation is 2:1 and the 3D pane beside it is much taller;
+     centring in the leftover space keeps the dead space symmetric */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#obs-canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: crosshair;
+  background: #000;
+}
+
+.pane-3d {
+  padding-bottom: 0.55rem;
+}
+
+#scene-canvas {
+  width: 100%;
+  height: 380px;
+  border-radius: 5px;
+  background: #001b35;
+  display: block;
+  touch-action: none;
+}
+
+.cam-presets {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.55rem;
+  display: flex;
+  gap: 0.22rem;
+  z-index: 2;
+}
+
+.cam-presets button {
+  appearance: none;
+  border: 1px solid var(--panel-rule);
+  background: rgba(0, 20, 40, 0.7);
+  color: var(--panel-ink-2);
+  font: inherit;
+  font-size: 0.66rem;
+  border-radius: 4px;
+  padding: 0.13rem 0.42rem;
+  cursor: pointer;
+}
+
+.cam-presets button:hover {
+  color: var(--navy);
+  background: var(--maize);
+  border-color: var(--maize);
+}
+
+.theater-controls {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.scrub {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.scrub label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--panel-ink-2);
+  flex: none;
+  width: 7rem;
+}
+
+.scrub input[type="range"] {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scrub input[type="range"]::-webkit-slider-thumb {
+  background: var(--maize);
+  border-color: var(--panel);
+}
+
+.scrub input[type="range"]::-moz-range-thumb {
+  background: var(--maize);
+  border-color: var(--panel);
+}
+
+.scrub output {
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--panel-ink);
+  flex: none;
+  min-width: 7.2rem;
+  text-align: right;
+}
+
+.scrub.horizon input[type="range"] {
+  background: linear-gradient(90deg, var(--t0), var(--t1), var(--t2), var(--t3), var(--t4));
+}
+
+.play-btn {
+  appearance: none;
+  flex: none;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--maize);
+  background: transparent;
+  color: var(--maize);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.play-btn:hover,
+.play-btn.is-on {
+  background: var(--maize);
+  color: var(--navy);
+}
+
+.layer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  margin-top: 0.15rem;
+}
+
+.toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  font: inherit;
+  font-size: 0.72rem;
+  border: 1px solid var(--panel-rule);
+  background: var(--panel-2);
+  color: var(--panel-ink-2);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.toggle.is-on {
+  color: var(--panel-ink);
+  border-color: var(--maize);
+}
+
+.toggle .swatch {
+  width: 12px;
+  height: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  opacity: 0.35;
+}
+
+.toggle.is-on .swatch {
+  opacity: 1;
+}
+
+.theater-legend {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--panel-rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.3rem;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--panel-ink-2);
+}
+
+.ramp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ramp .bar {
+  width: 105px;
+  height: 7px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--t0), var(--t1), var(--t2), var(--t3), var(--t4));
+}
+
+.legend-hint {
+  margin-left: auto;
+  font-style: italic;
+}
+
+.theater-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.74rem;
+  color: var(--panel-ink-2);
+  display: none;
+}
+
+.theater-fallback {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--panel-ink-2);
+}
+
+/* ------------------------------------------------------------ results table */
+
+.table-wrap {
+  margin: 0 auto;
+  max-width: 620px;
+  overflow-x: auto;
+}
+
+/* the caption sits under the table, centred on it, not under the full-width
+   block; the class pairing wins over .chart-note's own margin shorthand */
+.chart-note.table-note {
+  max-width: 620px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* .block-note carries a negative top margin to hug a heading directly
+   above it; that same pull makes a .block-note directly AFTER a table
+   ride up into the table's bottom border instead. Override just that
+   adjacency rather than touching the base rule other callers rely on. */
+.table-wrap + .block-note {
+  margin-top: 1rem;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.55rem 0.9rem;
+  text-align: right;
+  border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+
+.results-table th:first-child,
+.results-table td:first-child {
+  text-align: left;
+}
+
+.results-table thead th {
+  background: var(--navy);
+  color: var(--panel-ink);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+
+.results-table td.hl,
+.results-table th.hl {
+  background: rgba(0, 39, 76, 0.055);
+}
+
+.results-table thead th.hl {
+  background: var(--panel-2);
+}
+
+.results-table tbody tr.is-ours td {
+  background: rgba(255, 203, 5, 0.16);
+  border-top: 2px solid var(--maize);
+  border-bottom: 2px solid var(--maize);
+}
+
+.results-table tbody tr.is-ours td.hl {
+  background: rgba(255, 203, 5, 0.34);
+}
+
+/* ---------------------------------------------------------------- charts */
+
+.chart-block {
+  margin-top: 1.4rem;
+}
+
+.chart-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.85rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--ink-2);
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+}
+
+.legend i {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1px solid var(--navy);
+  display: inline-block;
+}
+
+.chart-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-3);
+}
+
+.chart text {
+  font-family: inherit;
+}
+
+.chart .axis-line {
+  stroke: var(--ink-3);
+  stroke-width: 1;
+}
+
+.chart .grid-line {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.chart .tick-text {
+  font-size: 11px;
+  fill: var(--ink-3);
+}
+
+.chart .group-text {
+  font-size: 12px;
+  fill: var(--ink-2);
+  font-weight: 500;
+}
+
+.chart .value-text {
+  font-size: 10.5px;
+  fill: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.chart .col-head {
+  font-size: 11.5px;
+  font-weight: 600;
+  fill: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------------- takeaways */
+
+.takeaways {
+  list-style: none;
+  counter-reset: take;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+.takeaways li {
+  counter-increment: take;
+  border-top: 3px solid var(--navy);
+  padding-top: 0.75rem;
+}
+
+.takeaways h3 {
+  font-size: 0.98rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.takeaways h3::before {
+  content: counter(take) ". ";
+  color: var(--maize);
+  font-weight: 700;
+}
+
+.takeaways p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-2);
+}
+
+/* ---------------------------------------------------------------- bibtex */
+
+.bibtex-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.copy-button {
+  appearance: none;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1.5px solid var(--navy);
+  background: #fff;
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0.32rem 0.95rem;
+  cursor: pointer;
+  flex: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.copy-button:hover {
+  background: var(--navy);
+  color: var(--maize);
+}
+
+#citation pre {
+  margin: 0;
+  background: #fafafa;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--maize);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+}
+
+#citation code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--ink);
+  white-space: pre;
+}
+
+/* ---------------------------------------------------------------- responsive */
+
+@media (max-width: 900px) {
+  .paradigm {
+    grid-template-columns: 1fr;
+  }
+
+  .theater-panes {
+    grid-template-columns: 1fr;
+  }
+
+  #scene-canvas {
+    height: 320px;
+  }
+
+  .obs-stack {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 2.2rem 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .paper-title {
+    font-size: 1.95rem;
+  }
+
+  .authors {
+    font-size: 1.05rem;
+  }
+
+  .venue {
+    font-size: 0.92rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+
+  .block-title {
+    font-size: 1.15rem;
+    margin-top: 2.8rem;
+  }
+
+  .block-title.block-title-lead {
+    margin-top: 4.2rem;
+  }
+
+  .gallery-stage {
+    height: 210px;
+  }
+
+  .gallery-rail {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .scrub {
+    flex-wrap: wrap;
+  }
+
+  .scrub label {
+    width: auto;
+  }
+
+  .scrub input[type="range"] {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .scrub output {
+    margin-left: auto;
+  }
+
+  .legend-hint {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  /* three source labels do not fit on one line on a phone */
+  .gallery-bar .segmented {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .segmented button {
+    font-size: 0.73rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .gallery-bar,
+  .chart-bar {
+    justify-content: center;
+  }
+}
+
+/* ------------------------------------------------------------ sim3d gallery */
+
+.block-note {
+  color: var(--ink-3);
+  font-size: 0.92rem;
+  margin: -0.3rem 0 1rem;
+}
+
+.sim3d-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .sim3d-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sim3d-card {
+  background: var(--panel-2);
+  border: 1px solid var(--panel-rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sim3d-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--panel-rule);
+}
+
+
+.sim3d-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sim3d-badge.is-success {
+  background: rgba(120, 200, 150, 0.18);
+  color: #8ee0ab;
+}
+
+.sim3d-badge.is-failure {
+  background: rgba(240, 120, 110, 0.18);
+  color: #f5a49c;
+}
+
+.sim3d-canvas-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--panel);
+}
+
+.sim3d-canvas-wrap canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sim3d-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--panel-ink-2);
+  background: var(--panel);
+  text-align: center;
+  padding: 0.6rem;
+}
+
+.sim3d-readout {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.72rem;
+  color: var(--panel-ink-2);
+  font-variant-numeric: tabular-nums;
+  border-top: 1px solid var(--panel-rule);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

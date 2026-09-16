@@ -1,0 +1,107 @@
+{
+  "id": "track_metrics",
+  "title": "Future 3D track prediction accuracy",
+  "caption": "ADE and FDE in millimetres on the validation sets of the eight ablation tasks, computed over moving patches only and averaged across tasks. Lower is better.",
+  "unit": "mm",
+  "avg_label": null,
+  "row_label": "Variant",
+  "lower_is_better": true,
+  "note": null,
+  "tasks": [
+    "ADE (mm)",
+    "FDE (mm)"
+  ],
+  "task_groups": null,
+  "methods": [
+    {
+      "name": "Track regression",
+      "cite": null,
+      "ours": false,
+      "avg": null,
+      "values": [
+        {
+          "mean": 11.1,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 14.8,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "Track-conditioned action diffusion",
+      "cite": null,
+      "ours": false,
+      "avg": null,
+      "values": [
+        {
+          "mean": 9.9,
+          "std": null,
+          "rank": "second"
+        },
+        {
+          "mean": 12.5,
+          "std": null,
+          "rank": "second"
+        }
+      ]
+    },
+    {
+      "name": "w/o Visual\u2013Track Concatenation",
+      "cite": null,
+      "ours": false,
+      "avg": null,
+      "values": [
+        {
+          "mean": 11.9,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 15.3,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "w/o 4D RoPE",
+      "cite": null,
+      "ours": false,
+      "avg": null,
+      "values": [
+        {
+          "mean": 13.2,
+          "std": null,
+          "rank": null
+        },
+        {
+          "mean": 17.2,
+          "std": null,
+          "rank": null
+        }
+      ]
+    },
+    {
+      "name": "Full model",
+      "cite": null,
+      "ours": true,
+      "avg": null,
+      "values": [
+        {
+          "mean": 7.6,
+          "std": null,
+          "rank": "best"
+        },
+        {
+          "mean": 10.0,
+          "std": null,
+          "rank": "best"
+        }
+      ]
+    }
+  ]
+}

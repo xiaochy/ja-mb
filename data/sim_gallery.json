@@ -1,0 +1,828 @@
+{
+  "tasks": [
+    {
+      "slug": "pick_diverse_bottles",
+      "label": "Pick Diverse Bottles",
+      "group": "sync",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/pick_diverse_bottles/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 115,
+            "duration": 11.5
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/pick_diverse_bottles/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 123,
+            "duration": 12.3
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/pick_diverse_bottles/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 119,
+            "duration": 11.9
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/pick_diverse_bottles/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 126,
+            "duration": 12.6
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/pick_diverse_bottles/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 115,
+            "duration": 11.5
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode21",
+            "label": "Episode 21",
+            "src": "media/sim/easy/pick_diverse_bottles/episode21.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 106,
+            "duration": 10.6
+          },
+          {
+            "id": "episode45",
+            "label": "Episode 45",
+            "src": "media/sim/easy/pick_diverse_bottles/episode45.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 109,
+            "duration": 10.9
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode1",
+            "label": "Episode 1",
+            "src": "media/sim/hard/pick_diverse_bottles/episode1.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 96,
+            "duration": 9.6
+          },
+          {
+            "id": "episode2",
+            "label": "Episode 2",
+            "src": "media/sim/hard/pick_diverse_bottles/episode2.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 93,
+            "duration": 9.3
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/pick_diverse_bottles/preview.mp4",
+        "easy": "media/sim/easy/pick_diverse_bottles/preview.mp4",
+        "hard": "media/sim/hard/pick_diverse_bottles/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/pick_diverse_bottles/preview.jpg",
+        "easy": "media/sim/easy/pick_diverse_bottles/preview.jpg",
+        "hard": "media/sim/hard/pick_diverse_bottles/preview.jpg"
+      }
+    },
+    {
+      "slug": "place_bread_skillet",
+      "label": "Place Bread Skillet",
+      "group": "sync",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/place_bread_skillet/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 156,
+            "duration": 15.6
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/place_bread_skillet/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 166,
+            "duration": 16.6
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/place_bread_skillet/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 154,
+            "duration": 15.4
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/place_bread_skillet/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 169,
+            "duration": 16.9
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/place_bread_skillet/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 163,
+            "duration": 16.3
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode1",
+            "label": "Episode 1",
+            "src": "media/sim/easy/place_bread_skillet/episode1.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 127,
+            "duration": 12.7
+          },
+          {
+            "id": "episode2",
+            "label": "Episode 2",
+            "src": "media/sim/easy/place_bread_skillet/episode2.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 134,
+            "duration": 13.4
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/place_bread_skillet/preview.mp4",
+        "easy": "media/sim/easy/place_bread_skillet/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/place_bread_skillet/preview.jpg",
+        "easy": "media/sim/easy/place_bread_skillet/preview.jpg"
+      }
+    },
+    {
+      "slug": "place_bread_basket",
+      "label": "Place Bread Basket",
+      "group": "sync",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/place_bread_basket/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 321,
+            "duration": 32.1
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/place_bread_basket/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 318,
+            "duration": 31.8
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/place_bread_basket/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 234,
+            "duration": 23.4
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/place_bread_basket/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 164,
+            "duration": 16.4
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/place_bread_basket/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 232,
+            "duration": 23.2
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode19",
+            "label": "Episode 19",
+            "src": "media/sim/easy/place_bread_basket/episode19.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 289,
+            "duration": 28.9
+          },
+          {
+            "id": "episode30",
+            "label": "Episode 30",
+            "src": "media/sim/easy/place_bread_basket/episode30.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 226,
+            "duration": 22.6
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode10",
+            "label": "Episode 10",
+            "src": "media/sim/hard/place_bread_basket/episode10.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 147,
+            "duration": 14.7
+          },
+          {
+            "id": "episode30",
+            "label": "Episode 30",
+            "src": "media/sim/hard/place_bread_basket/episode30.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 147,
+            "duration": 14.7
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/place_bread_basket/preview.mp4",
+        "easy": "media/sim/easy/place_bread_basket/preview.mp4",
+        "hard": "media/sim/hard/place_bread_basket/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/place_bread_basket/preview.jpg",
+        "easy": "media/sim/easy/place_bread_basket/preview.jpg",
+        "hard": "media/sim/hard/place_bread_basket/preview.jpg"
+      }
+    },
+    {
+      "slug": "place_dual_shoes",
+      "label": "Place Dual Shoes",
+      "group": "sync",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/place_dual_shoes/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 241,
+            "duration": 24.1
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/place_dual_shoes/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 222,
+            "duration": 22.2
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/place_dual_shoes/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 218,
+            "duration": 21.8
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/place_dual_shoes/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 248,
+            "duration": 24.8
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/place_dual_shoes/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 220,
+            "duration": 22.0
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode0",
+            "label": "Episode 0",
+            "src": "media/sim/easy/place_dual_shoes/episode0.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 258,
+            "duration": 25.8
+          },
+          {
+            "id": "episode1",
+            "label": "Episode 1",
+            "src": "media/sim/easy/place_dual_shoes/episode1.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 232,
+            "duration": 23.2
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode12",
+            "label": "Episode 12",
+            "src": "media/sim/hard/place_dual_shoes/episode12.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 246,
+            "duration": 24.6
+          },
+          {
+            "id": "episode24",
+            "label": "Episode 24",
+            "src": "media/sim/hard/place_dual_shoes/episode24.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 247,
+            "duration": 24.7
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/place_dual_shoes/preview.mp4",
+        "easy": "media/sim/easy/place_dual_shoes/preview.mp4",
+        "hard": "media/sim/hard/place_dual_shoes/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/place_dual_shoes/preview.jpg",
+        "easy": "media/sim/easy/place_dual_shoes/preview.jpg",
+        "hard": "media/sim/hard/place_dual_shoes/preview.jpg"
+      }
+    },
+    {
+      "slug": "handover_block",
+      "label": "Handover Block",
+      "group": "seq",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/handover_block/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 277,
+            "duration": 27.7
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/handover_block/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 287,
+            "duration": 28.7
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/handover_block/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 285,
+            "duration": 28.5
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/handover_block/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 281,
+            "duration": 28.1
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/handover_block/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 282,
+            "duration": 28.2
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode0",
+            "label": "Episode 0",
+            "src": "media/sim/easy/handover_block/episode0.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 299,
+            "duration": 29.9
+          },
+          {
+            "id": "episode38",
+            "label": "Episode 38",
+            "src": "media/sim/easy/handover_block/episode38.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 283,
+            "duration": 28.3
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode8",
+            "label": "Episode 8",
+            "src": "media/sim/hard/handover_block/episode8.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 268,
+            "duration": 26.8
+          },
+          {
+            "id": "episode21",
+            "label": "Episode 21",
+            "src": "media/sim/hard/handover_block/episode21.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 234,
+            "duration": 23.4
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/handover_block/preview.mp4",
+        "easy": "media/sim/easy/handover_block/preview.mp4",
+        "hard": "media/sim/hard/handover_block/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/handover_block/preview.jpg",
+        "easy": "media/sim/easy/handover_block/preview.jpg",
+        "hard": "media/sim/hard/handover_block/preview.jpg"
+      }
+    },
+    {
+      "slug": "scan_object",
+      "label": "Scan Object",
+      "group": "seq",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/scan_object/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 181,
+            "duration": 18.1
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/scan_object/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 166,
+            "duration": 16.6
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/scan_object/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 193,
+            "duration": 19.3
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/scan_object/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 167,
+            "duration": 16.7
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/scan_object/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 169,
+            "duration": 16.9
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode6",
+            "label": "Episode 6",
+            "src": "media/sim/easy/scan_object/episode6.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 166,
+            "duration": 16.6
+          },
+          {
+            "id": "episode42",
+            "label": "Episode 42",
+            "src": "media/sim/easy/scan_object/episode42.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 153,
+            "duration": 15.3
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode1",
+            "label": "Episode 1",
+            "src": "media/sim/hard/scan_object/episode1.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 134,
+            "duration": 13.4
+          },
+          {
+            "id": "episode33",
+            "label": "Episode 33",
+            "src": "media/sim/hard/scan_object/episode33.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 163,
+            "duration": 16.3
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/scan_object/preview.mp4",
+        "easy": "media/sim/easy/scan_object/preview.mp4",
+        "hard": "media/sim/hard/scan_object/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/scan_object/preview.jpg",
+        "easy": "media/sim/easy/scan_object/preview.jpg",
+        "hard": "media/sim/hard/scan_object/preview.jpg"
+      }
+    },
+    {
+      "slug": "stack_blocks_two",
+      "label": "Stack Blocks Two",
+      "group": "seq",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/stack_blocks_two/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 319,
+            "duration": 31.9
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/stack_blocks_two/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 311,
+            "duration": 31.1
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/stack_blocks_two/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 304,
+            "duration": 30.4
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/stack_blocks_two/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 321,
+            "duration": 32.1
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/stack_blocks_two/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 320,
+            "duration": 32.0
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode0",
+            "label": "Episode 0",
+            "src": "media/sim/easy/stack_blocks_two/episode0.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 308,
+            "duration": 30.8
+          },
+          {
+            "id": "episode35",
+            "label": "Episode 35",
+            "src": "media/sim/easy/stack_blocks_two/episode35.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 309,
+            "duration": 30.9
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode10",
+            "label": "Episode 10",
+            "src": "media/sim/hard/stack_blocks_two/episode10.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 354,
+            "duration": 35.4
+          },
+          {
+            "id": "episode22",
+            "label": "Episode 22",
+            "src": "media/sim/hard/stack_blocks_two/episode22.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 306,
+            "duration": 30.6
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/stack_blocks_two/preview.mp4",
+        "easy": "media/sim/easy/stack_blocks_two/preview.mp4",
+        "hard": "media/sim/hard/stack_blocks_two/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/stack_blocks_two/preview.jpg",
+        "easy": "media/sim/easy/stack_blocks_two/preview.jpg",
+        "hard": "media/sim/hard/stack_blocks_two/preview.jpg"
+      }
+    },
+    {
+      "slug": "stack_blocks_three",
+      "label": "Stack Blocks Three",
+      "group": "seq",
+      "clips": {
+        "trackpred": [
+          {
+            "id": "ep095",
+            "label": "Episode 95",
+            "src": "media/sim/trackpred/stack_blocks_three/ep095.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 473,
+            "duration": 47.3
+          },
+          {
+            "id": "ep096",
+            "label": "Episode 96",
+            "src": "media/sim/trackpred/stack_blocks_three/ep096.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 451,
+            "duration": 45.1
+          },
+          {
+            "id": "ep097",
+            "label": "Episode 97",
+            "src": "media/sim/trackpred/stack_blocks_three/ep097.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 449,
+            "duration": 44.9
+          },
+          {
+            "id": "ep098",
+            "label": "Episode 98",
+            "src": "media/sim/trackpred/stack_blocks_three/ep098.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 470,
+            "duration": 47.0
+          },
+          {
+            "id": "ep099",
+            "label": "Episode 99",
+            "src": "media/sim/trackpred/stack_blocks_three/ep099.mp4",
+            "width": 640,
+            "height": 240,
+            "frames": 476,
+            "duration": 47.6
+          }
+        ],
+        "easy": [
+          {
+            "id": "episode0",
+            "label": "Episode 0",
+            "src": "media/sim/easy/stack_blocks_three/episode0.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 467,
+            "duration": 46.7
+          },
+          {
+            "id": "episode1",
+            "label": "Episode 1",
+            "src": "media/sim/easy/stack_blocks_three/episode1.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 461,
+            "duration": 46.1
+          }
+        ],
+        "hard": [
+          {
+            "id": "episode12",
+            "label": "Episode 12",
+            "src": "media/sim/hard/stack_blocks_three/episode12.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 452,
+            "duration": 45.2
+          },
+          {
+            "id": "episode25",
+            "label": "Episode 25",
+            "src": "media/sim/hard/stack_blocks_three/episode25.mp4",
+            "width": 320,
+            "height": 240,
+            "frames": 467,
+            "duration": 46.7
+          }
+        ]
+      },
+      "preview": {
+        "trackpred": "media/sim/trackpred/stack_blocks_three/preview.mp4",
+        "easy": "media/sim/easy/stack_blocks_three/preview.mp4",
+        "hard": "media/sim/hard/stack_blocks_three/preview.mp4"
+      },
+      "poster": {
+        "trackpred": "media/sim/trackpred/stack_blocks_three/preview.jpg",
+        "easy": "media/sim/easy/stack_blocks_three/preview.jpg",
+        "hard": "media/sim/hard/stack_blocks_three/preview.jpg"
+      }
+    }
+  ],
+  "sources": {
+    "trackpred": {
+      "label": "Track Prediction",
+      "split": true
+    },
+    "easy": {
+      "label": "Rollout \u00b7 Easy",
+      "split": false
+    },
+    "hard": {
+      "label": "Rollout \u00b7 Hard",
+      "split": false
+    }
+  }
+}
